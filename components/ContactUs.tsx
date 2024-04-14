@@ -1,4 +1,6 @@
+import { Facebook, Linkedin, Mail, PhoneCall } from "lucide-react";
 import React, { useState } from "react";
+import CustomButton from "./CustomButton";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -34,17 +36,43 @@ const ContactUs = () => {
           <br />
           Tel: 123-456-7890
         </p>
+        <div className="flex items-center justify-start space-x-6">
+          {/* LinkedIn Icon */}
+          <a
+            href="https://www.linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Linkedin className="h-6 w-6" color="#17173f" />
+          </a>
+          {/* Twitter Icon */}
+          <a
+            href="https://www.twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Mail className="h-6 w-6" color="#17173f" />
+          </a>
+          {/* Facebook Icon */}
+          <a
+            href="https://www.facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <PhoneCall className="h-6 w-6" color="#17173f" />
+          </a>
+        </div>
       </div>
-      <div className="z-50 md:w-1/2 mt-6 md:mt-0 flex-grow">
-        <form onSubmit={handleSubmit} className="max-w-lg mx-auto">
-          <div className="flex gap-4 mb-4">
+      <div className="z-50 md:w-1/2 mt-6 md:mt-0 p-24 flex-grow">
+        <form onSubmit={handleSubmit} className="w-full flex flex-col gap-y-16">
+          <div className="flex gap-4">
             <input
               type="text"
               name="firstName"
               placeholder="First Name"
               onChange={handleChange}
               value={formData.firstName}
-              className="flex-1 px-2 py-1 border-b-2 border-gray-300 focus:outline-none"
+              className="flex-1 px-2 py-1 bg-transparent h-12 border-b-[1px] border-[#17173f] focus:outline-none"
             />
             <input
               type="text"
@@ -52,35 +80,28 @@ const ContactUs = () => {
               placeholder="Last Name"
               onChange={handleChange}
               value={formData.lastName}
-              className="flex-1 px-2 py-1 border-b-2 border-gray-300 focus:outline-none"
+              className="flex-1 px-2 py-1 bg-transparent h-12 border-b-[1px] border-[#17173f] focus:outline-none"
             />
           </div>
-          <div className="flex flex-col gap-4 mb-4">
-            <input
-              type="email"
-              name="email"
-              placeholder="Email *"
-              required
-              onChange={handleChange}
-              value={formData.email}
-              className="px-2 py-1 border-b-2 border-gray-300 focus:outline-none"
-            />
-            <textarea
-              name="message"
-              placeholder="Leave us a message..."
-              onChange={handleChange}
-              value={formData.message}
-              className="px-2 py-1 border-b-2 border-gray-300 focus:outline-none"
-              rows={3}
-            ></textarea>
-          </div>
-          <div className="text-center">
-            <button
-              type="submit"
-              className="bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700 focus:outline-none transition-colors"
-            >
-              Submit
-            </button>
+          <input
+            type="email"
+            name="email"
+            placeholder="Email *"
+            required
+            onChange={handleChange}
+            value={formData.email}
+            className="flex-1 px-2 py-1 bg-transparent h-12 border-b-[1px] border-[#17173f] focus:outline-none"
+          />
+          <textarea
+            name="message"
+            placeholder="Leave us a message..."
+            onChange={handleChange}
+            value={formData.message}
+            className="flex-1 px-2 py-1 bg-transparent h-12 border-b-[1px] border-[#17173f] focus:outline-none"
+            rows={3}
+          ></textarea>
+          <div className="flex">
+            <CustomButton text="Submit" />
           </div>
         </form>
       </div>
