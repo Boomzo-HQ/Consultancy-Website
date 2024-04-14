@@ -14,7 +14,7 @@ const Hero = () => {
         <h5 className="text-lg text-median font-normal">
           Streamline your path to success with BizBud&apos;s expert guidance. We
           equip you with actionable insights and strategies to elevate your
-          business at every stage. Let's navigate the journey to your goals
+          business at every stage. Let navigate the journey to your goals
           together—efficiently and effectively.
         </h5>
         <div className="flex gap-6 items-center">

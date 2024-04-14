@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const AboutUs = () => {
@@ -29,10 +30,12 @@ const AboutUs = () => {
         </div>
       </div>
       <div className="md:w-1/2 mt-6 md:mt-0 flex-grow">
-        <img
+        <Image
           src={img}
           alt="img"
-          className="flex-grow object-fill md:h-[110vh]"
+          width={500}
+          height={500}
+          className="flex-grow object-fill md:h-[110vh] w-full"
         />
       </div>
     </section>
