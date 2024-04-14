@@ -2,6 +2,7 @@ import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
+  CarouselApi,
   CarouselContent,
   CarouselItem,
   CarouselNext,
@@ -37,19 +38,36 @@ const reviews = [
 ];
 
 const Testimonials = () => {
+  const [api, setApi] = React.useState<CarouselApi>();
+  const [current, setCurrent] = React.useState(0);
+  const [count, setCount] = React.useState(0);
+
+  React.useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap() + 1);
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap() + 1);
+    });
+  }, [api]);
+
   return (
     <section className="bg-[#9e3efc] py-28 flex flex-col gap-y-10 items-center justify-center">
       <h3 className="text-base font-semibold text-white uppercase tracking-widest">
         Testimonials
       </h3>
-      <Carousel className="w-1/2">
+      <Carousel setApi={setApi} className="w-full md:w-1/2">
         <CarouselContent>
           {reviews.map((review, index) => (
             <CarouselItem key={index}>
               <div className="p-1">
-                <Card className="border-none w-full">
+                <Card className="border-none w-full shadow-none">
                   <CardContent className="flex flex-col gap-y-10 items-center justify-center p-6">
-                    <span className="text-xl text-white font-light text-center leading-relaxed">
+                    <span className="text-sm md:text-xl text-white font-light text-center leading-relaxed">
                       {review.review}
                     </span>
                     <div>
@@ -63,9 +81,12 @@ const Testimonials = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="border-none text-white" />
-        <CarouselNext className="border-none text-white" />
+        <CarouselPrevious className="hidden md:block border-none text-white" />
+        <CarouselNext className="hidden md:block border-none text-white" />
       </Carousel>
+      <div className="text-center text-sm text-white">
+        Review {current} of {count}
+      </div>
     </section>
   );
 };

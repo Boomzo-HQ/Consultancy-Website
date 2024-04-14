@@ -9,8 +9,10 @@ const FeatureCard: React.FC<{
   return (
     <div className="flex flex-col items-center gap-y-2 py-4 px-10">
       <div className="">{icon}</div>
-      <h3 className="text-base font-semibold text-median">{title}</h3>
-      <p className="text-median text-center font-light text-lg leading-6">
+      <h3 className="text-sm md:text-base font-semibold text-median">
+        {title}
+      </h3>
+      <p className="text-base text-median text-center font-light md:text-lg leading-6">
         {description}
       </p>
     </div>
@@ -19,19 +21,18 @@ const FeatureCard: React.FC<{
 
 const Services = () => {
   return (
-    <div className="py-20 flex flex-col gap gap-y-20">
+    <div className="py-20 flex flex-col gap-y-10 md:gap-y-20">
       <section className="text-center flex flex-col items-center justify-center">
         <h2 className="text-base text-minor font-bold uppercase tracking-widest">
           Services
         </h2>
-        <p className="mt-4 text-4xl w-1/3 leading-tight font-bold text-median">
+        <p className="mt-4 text-xl md:text-4xl w-full md:w-1/3 leading-tight font-bold text-median">
           Taking Your Business to the Next Level
         </p>
       </section>
       <section>
-        <div className="w-full px-[15vh]">
+        <div className="w-full px-0 md:px-[15vh]">
           <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            {/* You would replace the SVG with your actual icons */}
             <FeatureCard
               title="Business Plans"
               description="I'm a paragraph. Click here to add your own text and edit me."

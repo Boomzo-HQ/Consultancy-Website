@@ -12,7 +12,6 @@ const ContactUs = () => {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    // Process the form data
     console.log(formData);
   };
 
@@ -24,11 +23,13 @@ const ContactUs = () => {
   return (
     <section className="flex flex-col md:flex-row items-center md:items-start bg-white relative">
       <div className="absolute inset-0 h-full w-full bg-white bg-[linear-gradient(to_right,#17173f12_1px,transparent_1px),linear-gradient(to_bottom,#17173f12_1px,transparent_1px)] bg-[size:42px_42px] z-10"></div>
-      <div className="z-50 md:w-1/2 p-24 flex flex-col gap-y-7">
+      <div className="z-50 w-full px-[8vw] py-20 text-center md:text-left md:w-1/2 md:p-24 flex flex-col gap-y-7">
         <h3 className="text-base font-semibold text-minor uppercase">
           Contact
         </h3>
-        <h2 className="text-4xl text-median font-bold">Lets Wrok Together</h2>
+        <h2 className="text-2xl md:text-4xl text-median font-bold">
+          Lets Wrok Together
+        </h2>
         <p className="text-lg font-light text-median tracking-wide leading-8">
           500 Terry Francine St. San Francisco, CA 94158
           <br />
@@ -36,7 +37,7 @@ const ContactUs = () => {
           <br />
           Tel: 123-456-7890
         </p>
-        <div className="flex items-center justify-start space-x-6">
+        <div className="flex items-center justify-center md:justify-start space-x-6">
           {/* LinkedIn Icon */}
           <a
             href="https://www.linkedin.com"
@@ -63,9 +64,12 @@ const ContactUs = () => {
           </a>
         </div>
       </div>
-      <div className="z-50 md:w-1/2 mt-6 md:mt-0 p-24 flex-grow">
-        <form onSubmit={handleSubmit} className="w-full flex flex-col gap-y-16">
-          <div className="flex gap-4">
+      <div className="z-50 w-full px-10 pb-20 md:w-1/2 mt-6 md:mt-0 md:p-24 flex-grow">
+        <form
+          onSubmit={handleSubmit}
+          className="w-full flex flex-col gap-y-10 md:gap-y-16"
+        >
+          <div className="flex flex-col md:flex-row gap-10 md:gap-4">
             <input
               type="text"
               name="firstName"
@@ -100,7 +104,7 @@ const ContactUs = () => {
             className="flex-1 px-2 py-1 bg-transparent h-12 border-b-[1px] border-[#17173f] focus:outline-none"
             rows={3}
           ></textarea>
-          <div className="flex">
+          <div className="flex justify-center md:justify-start">
             <CustomButton text="Submit" />
           </div>
         </form>
