@@ -7,6 +7,7 @@ import Stats from "../../components/Stats";
 import AboutUs from "../../components/AboutUs";
 import ContactUs from "../../components/ContactUs";
 import Testimonials from "../../components/Testimonials";
+import Gmap from "../../components/Gmap";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <AboutUs />
       <Testimonials />
       <ContactUs />
+      <Gmap />
     </div>
   );
 }
