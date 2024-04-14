@@ -14,18 +14,17 @@ const AboutUs = () => {
         </h2>
         <div className="flex flex-col gap-y-4">
           <p className="text-lg font-light text-median tracking-wide leading-relaxed">
-            I'm a paragraph. Click here to add your own text and edit me. It's
-            easy. Just click "Edit Text" or double click me to add your own
-            content and make changes to the font. Feel free to drag and drop me
-            anywhere you like on your page. I’m a great place for you to tell a
-            story and let your users know a little more about you.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+            magni numquam velit nobis fugiat maiores voluptas laborum culpa
+            porro natus, consectetur sequi voluptatibus doloremque quod
+            inventore quas, dolor iste ullam corporis omnis ut esse. Molestiae
+            consequuntur recusandae vitae magni fugit omnis? Eos facere sapiente
           </p>
           <p className="text-lg font-light text-median tracking-wide leading-relaxed">
-            I'm a paragraph. Click here to add your own text and edit me. It's
-            easy. Just click "Edit Text" or double click me to add your own
-            content and make changes to the font. Feel free to drag and drop me
-            anywhere you like on your page. I’m a great place for you to tell a
-            story and let your users know a little more about you.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
+            inventore tempora explicabo vero rerum eveniet omnis quidem voluptas
+            eaque ipsam et odit, quibusdam libero distinctio reiciendis soluta
+            optio ad similique. Odit possimus voluptatem commodi laborum tempore
           </p>
         </div>
       </div>

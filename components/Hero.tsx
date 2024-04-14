@@ -12,7 +12,7 @@ const Hero = () => {
           The Power of Good Advice
         </h1>
         <h5 className="text-lg text-median font-normal">
-          Streamline your path to success with BizBud’s expert guidance. We
+          Streamline your path to success with BizBud&apos;s expert guidance. We
           equip you with actionable insights and strategies to elevate your
           business at every stage. Let's navigate the journey to your goals
           together—efficiently and effectively.

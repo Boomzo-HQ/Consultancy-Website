@@ -25,7 +25,7 @@ const Navbar = () => {
           {["Home", "Services", "About", "Testimonials", "Contact"].map(
             (option, idx) => {
               return (
-                <a href="#" className="text-[#17173f] font-normal text-lg">
+                <a href="#" key={idx} className="text-[#17173f] font-normal text-lg">
                   {option}
                 </a>
               );
